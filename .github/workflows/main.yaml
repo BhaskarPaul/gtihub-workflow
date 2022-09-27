@@ -1,4 +1,4 @@
-name: Actions Workflow
+name: Shell Workflow
 
 on: [push]
 
@@ -6,23 +6,7 @@ jobs:
   run-shell-command:
     runs-on: ubuntu-latest
     steps:
-      - name: echo a string
-        run: echo "Hello World"
-      - name: multiline command
-        run: |
-          npm -v 
-          node -v
-      - name: python commands
-        run: |
-          import platform
-          print(platform.processor())
-        shell: python
-  run-windows-command:
-    runs-on: windows-latest
-    needs: ["run-shell-command"]
-    steps:
-      - name: Directory powershell
-        run: Get-Location
-      - name: Directory shell
-        run: pwd
-        shell: bash
+      - name: List directories
+        run: ls
+      - name: List all directories (-a)
+        run: ls -a
