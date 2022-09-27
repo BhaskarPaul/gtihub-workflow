@@ -1,9 +1,8 @@
 name: Shell Workflow
 
 on:
-  push:
   schedule:
-    - cron: '25 00 * * *'
+    - cron: '30 00 * * *'
 
 jobs:
   run-shell-command:
