@@ -6,6 +6,8 @@ jobs:
   run-shell-command:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@V3.0.2
       - name: List directories
         run: ls
       - name: List all directories (-a)
