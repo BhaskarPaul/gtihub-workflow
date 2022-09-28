@@ -17,3 +17,5 @@ jobs:
         run: ls -a
       - name: Github repository name
         run: echo ${{ github.event.repository.name }}
+      - name: GitHub repo secret key
+        run: echo "${{ secrets.MY_REPO_SECRET_KEY }}"
